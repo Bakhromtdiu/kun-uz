@@ -1,0 +1,23 @@
+### Login
+GET http://localhost:8080/authorization/login
+Content-Type: application/json
+
+{
+  "phone": "5900",
+  "password": "5900"
+}
+
+### Register
+POST http://localhost:8080/authorization/register
+Content-Type: application/json
+
+{
+  "name": "Dastan",
+  "surname": "Abilashimov",
+  "phone": "0243",
+  "password": "0243",
+  "email": "nabijonovmuhammadsodiq43@gmail.com"
+}
+
+### Create Admin init
+GET http://localhost:8080/init/data

@@ -1,0 +1,47 @@
+### Create article By noderator
+POST http://localhost:8080/article/admin/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzA0OTQxMjIsImlkIjo3LCJyb2xlIjoiTU9ERVJBVE9SIiwiZXhwIjoxNjcwNTgwNTIyLCJpc3MiOiJNdWhhbW1hZHNvZGlxIn0.7P3o-Q8cNsyUESCEw0nA8OXOCREd83Dqz95wwUOeSlmjIhvzz16EamktXwuJFI_rhjYKfzufdg6_Os5ajDGCLg
+
+{
+  "title": "Pyhton5",
+  "description": "Dasturlash",
+  "content": "It EDU",
+  "regionId": 1,
+  "categoryId": 1
+}
+
+### Update Article By Moderator
+PUT http://localhost:8080/article/update/eeaa5ab2-3d2f-43bf-808d-60f76a7e1bcc
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzA0OTQxMjIsImlkIjo3LCJyb2xlIjoiTU9ERVJBVE9SIiwiZXhwIjoxNjcwNTgwNTIyLCJpc3MiOiJNdWhhbW1hZHNvZGlxIn0.7P3o-Q8cNsyUESCEw0nA8OXOCREd83Dqz95wwUOeSlmjIhvzz16EamktXwuJFI_rhjYKfzufdg6_Os5ajDGCLg
+
+{
+  "title": "Shaxmat bo'yicha jahon chempionati otkazildi",
+  "description": "Shaxmat chempionlari",
+  "content": "Shaxmat",
+  "regionId": 1,
+  "categoryId": 1,
+  "imageId":
+}
+
+
+
+### Delete Article By Id
+DELETE http://localhost:8080/article/delete/1b1fa4d1-ca3d-497f-bb50-0dbdcfb99af6
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzA0OTQxMjIsImlkIjo3LCJyb2xlIjoiTU9ERVJBVE9SIiwiZXhwIjoxNjcwNTgwNTIyLCJpc3MiOiJNdWhhbW1hZHNvZGlxIn0.7P3o-Q8cNsyUESCEw0nA8OXOCREd83Dqz95wwUOeSlmjIhvzz16EamktXwuJFI_rhjYKfzufdg6_Os5ajDGCLg
+
+
+### Change Status By Publisher
+GET http://localhost:8080/article/status?id=eeaa5ab2-3d2f-43bf-808d-60f76a7e1bcc&status=PUBLISHED
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzA1MDQ3OTUsImlkIjoxMCwicm9sZSI6IlBVQkxJU0hFUiIsImV4cCI6MTY3MDU5MTE5NSwiaXNzIjoiTXVoYW1tYWRzb2RpcSJ9.J9AeR8bXJhHnwCSFl7cyfirMhYfCmsYUaqm5Rc37KE7v85fuRTWfPg8tguaEcqtLlPWlAyBTOqSxyKAhMyZ8EA
+
+
+### Get Last Five Article
+GET http://localhost:8080/article/last_five?status='PUBLIHSED'
+
+### Get Last 3 Article
+GET http://localhost:8080/article/last_three?status='PUBLIHSED'
+
+### Get Last 8 Article
+GET http://localhost:8080/article/last_eight
